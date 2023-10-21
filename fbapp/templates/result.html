@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+<!-- Header -->
+{% block content %}
+<header>
+  <div class="container" id="maincontent" tabindex="-1">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <div class="card">
+            <div class="row">
+              <div class="col-sm-3 col-sm-offset-3">
+                  <img class="img-responsive img-circle user_profile" src="{{user_image}}" id="user_image">
+              </div>
+              <div class="col-sm-3">
+                <h2 id="user_name">{{user_name}}</h2>
+              </div>
+              <div class="col-sm-12">
+                <p id="description" {% if blur: %}class="blur"{% endif %}>{{ description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+          <a class="btn btn-lg btn-outline big-button facebook_button" id="FbShare">
+              Partager sur Facebook
+          </a>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+{% endblock %}
+   
